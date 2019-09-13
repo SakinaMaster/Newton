@@ -1,9 +1,6 @@
-
-
 #include<iostream>		//for cin and cout
 #include<cctype>		//for using toupper which turns the lowercase letters into uppercase.
 using namespace std;
-
 
 //---------------------------------------------------------------------------------------------------------------------
 //Displays game instructions.
@@ -19,7 +16,7 @@ void displayGameInstructions()
        	 << "of the bottom of a column to be dropped back in at the top of    \n"
       	 << "that column.  Enter 'x' to exit.                               \n\n"
 	 << endl;
-}//end displayGameInstructions()
+} //end displayGameInstructions()
 
 
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -39,7 +36,7 @@ void displayBoard(char board[], int BoardValues)
 	cout <<"--- --- --- --- --- \n"
 		 <<" 1   2   3   4   5"
 		 << endl; 
-}//end of displayBoard()
+} //end of displayBoard()
 
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +51,7 @@ void placeGamePieceInColumn(char rowColumn[], int BoardValues, int columnNumber,
 		} 
 	}
 	displayBoard(rowColumn, BoardValues);					//Displays the game board after placing game piece.
-}// end of placeGamePieceInColumn()
+} //end of placeGamePieceInColumn()
 
 
 /*----------------------------------------------------------------------------------------------------------------
@@ -78,7 +75,7 @@ void rotate(char board[], int BoardElements, int columnToRotate)
 		board[0 + columnToRotate - 1] = temp;			//If the column entered by the user is full then replace the top most piece in the column with the value of the last piece.
 	}
 	displayBoard(board, BoardElements);				//Display the rotated game board.
-}//end of rotate()
+} //end of rotate()
 
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------
@@ -98,7 +95,7 @@ char rowCheck(char board[], int BoardElements)
 		}
 	}
 	return '.';					//If 5 consecutive X's or O's are not found, return '.'
-}//end of rowCheck()
+} //end of rowCheck()
 
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -117,7 +114,7 @@ char colCheck (char board[], int BoardElements)
 		}
 	}
 	return '.';				//If 5 consecutive X's or O's are not found, return '.'
-}//end of colCheck()
+} //end of colCheck()
 
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------
@@ -136,7 +133,7 @@ char upperLeftDiagonalCheck(char board[], int BoardElements)
 		}
 	}
 	return '.';					//If 5 consecutive X's or O's are not found in a diagonal, return '.'
-}//end of upperLeftDiagonalCheck()
+} //end of upperLeftDiagonalCheck()
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -155,7 +152,7 @@ char lowerLeftDiagonalCheck(char board[], int BoardElements)
 		}
 	}
 	return '.';					//If 5 consecutive X's or O's are not found in a diagonal, return '.'
-}//end of lowerLeftDiagonalCheck()
+} //end of lowerLeftDiagonalCheck()
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------
@@ -245,5 +242,5 @@ int main()
 		x++;														//Increment x to alternate values between X and O
 	}
 	return 0;
-}//end of main()
+} //end of main()
 
